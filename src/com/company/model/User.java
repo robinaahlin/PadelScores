@@ -1,6 +1,6 @@
 package com.company.model;
 
-public class Person {
+public class User {
 
     private String name;
     private int points;
@@ -30,7 +30,7 @@ public class Person {
         this.matches = matches;
     }
 
-    public Person(String name){
+    public User(String name){
         this.name = name;
         this.matches = 0;
         this.points = 0;
