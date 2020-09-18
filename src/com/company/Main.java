@@ -9,7 +9,7 @@ public class Main {
 
         int nreq = 1;
         try {
-            ServerSocket sock = new ServerSocket(3308);
+            ServerSocket sock = new ServerSocket(3333);
             while(true) {
                 Socket newSock = sock.accept();
                 System.out.println("Creating thread ...");
