@@ -2,16 +2,34 @@ package com.company.model;
 
 public class User {
 
-    private String name;
+    private int userID;
+    private String username;
+    private String password;
     private int points;
-    private int matches;
+    private int games;
 
-    public String getName() {
-        return name;
+    public int getUserID() {
+        return userID;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUserID(int userID) {
+        this.userID = userID;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public int getPoints() {
@@ -22,17 +40,23 @@ public class User {
         this.points = points;
     }
 
-    public int getMatches() {
-        return matches;
+    public int getGames() {
+        return games;
     }
 
-    public void setMatches(int matches) {
-        this.matches = matches;
+    public void setGames(int games) {
+        this.games = games;
     }
 
-    public User(String name){
-        this.name = name;
-        this.matches = 0;
+    public User(int userID, String username, String password){
+        this.userID = userID;
+        this.username = username;
+        this.password = password;
+        this.games = 0;
         this.points = 0;
+    }
+
+    public User(){
+
     }
 }
