@@ -12,12 +12,4 @@ public class controllerUser {
     public controllerUser(){
         users = new ArrayList<>();
     }
-
-    public void addUser(String name){
-        if(name != null) {
-            User user = new User(name);
-        } else {
-            System.out.println("Error, user not added!");
-        }
-    }
 }

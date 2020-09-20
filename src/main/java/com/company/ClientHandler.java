@@ -1,5 +1,6 @@
 package com.company;
 
+import com.company.controller.LoginBean;
 import com.company.controller.MainController;
 import com.company.model.User;
 
@@ -77,9 +78,6 @@ public class ClientHandler extends Thread {
         return "NEXT COMMAND FIX!";
     }
 
-    /**
-     * JSON HELP CLASS
-     */
     /*
     private String convertToJSON(List<User> users){
         String json = new Gson().toJson(users);

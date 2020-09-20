@@ -7,20 +7,19 @@ import java.sql.SQLException;
 public class DBConnector {
 
     private Connection connection = null;
-    private String url = "";
 
     private final static String user = "root";
     private final static String password = "root1337";
 
     public DBConnector(){
 
+        // Older version used, depricated
+        // com.mysql.jdbc.Driver
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             connection = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3333/androiddb?autoReconnect=true&useSSL=false", user, password);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
+                    "jdbc:mysql://localhost:3306/padeldb?autoReconnect=true&useSSL=false", user, password);
+        } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
     }

@@ -17,18 +17,12 @@ public class MainController {
 
     public int loginUser(){
         LoginController loginController = new LoginController();
-        int userID = loginController.loginUser();
 
-        if(userID != 0){
+        if(loginController.loginUser()){
             System.out.println("Login success!");
         } else {
             System.out.println("Login failed!");
         }
-        return userID;
-    }
-
-    // Create a new user with input from user.
-    public void createNewUser(){
-        queryClass.addUser(LoginBean.getUsername(), LoginBean.getPassword());
+        return 0;
     }
 }

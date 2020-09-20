@@ -2,6 +2,7 @@ package com.company.controller;
 
 public class LoginBean {
 
+    private static boolean activeUser;
     private static int userID;
     private static String username;
     private static String password;
