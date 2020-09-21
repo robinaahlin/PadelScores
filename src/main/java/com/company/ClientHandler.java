@@ -15,9 +15,6 @@ public class ClientHandler extends Thread {
     private Socket newSock;
     private int n;
 
-    private MainController mainController;
-    private User user;
-
     public ClientHandler(Socket s, int v) {
         newSock = s;
         n = v;
@@ -38,11 +35,11 @@ public class ClientHandler extends Thread {
 
             LoginBean.setUsername(username);
             LoginBean.setPassword(password);
-            mainController = new MainController();
+            MainController mainController = new MainController();
             int userID = mainController.loginUser();
 
             if(userID != 0){
-                user = new User(userID, username, password);
+                User user = new User(userID, username, password);
                 LoginBean.setUserID(userID);
                 write.println("SUCCESS" + userID);
             } else {

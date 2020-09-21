@@ -20,9 +20,10 @@ public class MainController {
 
         if(loginController.loginUser()){
             System.out.println("Login success!");
+            return 1;
         } else {
             System.out.println("Login failed!");
+            return 0;
         }
-        return 0;
     }
 }

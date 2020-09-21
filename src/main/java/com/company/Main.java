@@ -8,7 +8,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class Main {
-
+/*
     public static void main(String[] args) {
 
         LoginBean.setUsername("Robin");
@@ -16,13 +16,13 @@ public class Main {
         MainController mainController = new MainController();
         mainController.loginUser();
     }
+    */
 
-    /*
     public static void main(String[] args) {
 
         int nreq = 1;
         try {
-            ServerSocket sock = new ServerSocket(3306);
+            ServerSocket sock = new ServerSocket(3308);
             while(true) {
                 Socket newSock = sock.accept();
                 System.out.println("Creating thread ...");
@@ -34,5 +34,4 @@ public class Main {
         }
         System.out.println("End!");
     }
-     */
 }
