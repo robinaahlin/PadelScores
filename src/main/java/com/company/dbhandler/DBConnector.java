@@ -13,8 +13,6 @@ public class DBConnector {
 
     public DBConnector(){
 
-        // Older version used, depricated
-        // com.mysql.jdbc.Driver
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             connection = DriverManager.getConnection(
