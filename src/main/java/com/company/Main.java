@@ -1,22 +1,9 @@
 package com.company;
 
-import com.company.controller.LoginBean;
-import com.company.controller.LoginController;
-import com.company.controller.MainController;
-
 import java.net.ServerSocket;
 import java.net.Socket;
 
 public class Main {
-/*
-    public static void main(String[] args) {
-
-        LoginBean.setUsername("Robin");
-        LoginBean.setPassword("root");
-        MainController mainController = new MainController();
-        mainController.loginUser();
-    }
-    */
 
     public static void main(String[] args) {
 
@@ -24,9 +11,10 @@ public class Main {
         try {
             ServerSocket sock = new ServerSocket(3308);
             while(true) {
-                Socket newSock = sock.accept();
+                Socket socket = sock.accept();
+                System.out.println("server connected to " + socket.getInetAddress());
                 System.out.println("Creating thread ...");
-                Thread t = new ClientHandler(newSock, nreq);
+                Thread t = new ClientHandler(socket, nreq);
                 t.start();
             }
         } catch (Exception e) {

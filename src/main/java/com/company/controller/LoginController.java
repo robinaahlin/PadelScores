@@ -16,10 +16,6 @@ public class LoginController {
 
     private static final String AUTHENTICATE_USER = "SELECT * FROM padeldb.users WHERE username = ? AND password = ?;";
 
-    /**
-     * FIX THIS (FIXED WITH FINALLY )
-     * CHANGE SO dbconnector uses a createConnection instead of getConnection ??
-     */
     public LoginController(){
         DBConnector dbConnector = new DBConnector();
         connection = dbConnector.getConnection();
@@ -34,9 +30,6 @@ public class LoginController {
      * Fix query-class for making database requests.
      */
     private boolean loginUser(String username, String password){
-
-        //QueryClass queryClass = new QueryClass();
-
         return authenticateUser(username,password);
     }
 
